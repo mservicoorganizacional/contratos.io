@@ -7,13 +7,15 @@
         <link rel="stylesheet" type="text/css" href="./styles.css">
     </head>
     <body>
-        <div id="btc_aprume"></div>
-    
-    <select id="fileDropdown">
-        <option value="">Selecione um arquivo</option>
-    </select>
+    <header>
 
+        <h1>Contrato</h1>
+    </header>
+        
     <form id="contractForm">
+        <select id="fileDropdown">
+            <option value="">Selecione um contrato</option>
+        </select>
         <div class="section section-gray">
             <label for="tipoLocacao">Tipo da Locação:</label>
             <select id="tipoLocacao" name="tipoLocacao" required="">
@@ -169,7 +171,7 @@
         fetch(window.location.href + 'contratos.json')
             .then(response => response.json())
             .then(data => {
-            data.files.forEach(file => {
+            data.contratos.forEach(file => {
                 const option = document.createElement('option');
                 option.value = file;
                 option.textContent = file;
