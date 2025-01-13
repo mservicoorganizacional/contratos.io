@@ -220,7 +220,6 @@
                     contratoFinal = contratoFinal.replaceAll('{{TESTEMUNHA2}}', document.getElementById('testemunha2').value);
                     
                     var contratoPartes = contratoFinal.split('\n\n');
-                    console.log(contratoPartes);
                     const { jsPDF } = window.jspdf;
                     const doc = new jsPDF();
                     
@@ -231,7 +230,7 @@
                     var alturaTexto = 0; 
                     var linhas;
                     
-                    doc.setFont("Helvetica", "bold");
+                    doc.setFont("Helvetica", "normal");
                     doc.setFontSize(fontSize);
                     
                     contratoPartes.forEach((item, index)=>{
@@ -242,7 +241,6 @@
                             doc.addPage();
                             size = 20;
                         }
-                        console.log(item);
                         doc.text(item, 20, size, { maxWidth: 170 });
                         size += alturaTexto + fatorConversao * 5;
                     })
