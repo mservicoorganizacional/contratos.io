@@ -174,8 +174,9 @@
             data.contratos.forEach(file => {
                 const option = document.createElement('option');
                 option.value = file;
-                option.textContent = file;
+                option.textContent = file.replace('.txt', '');
                 dropdown.appendChild(option);
+                dropdown.value = file;
             });
             })
             .catch(error => console.error('Erro ao carregar a lista de arquivos:', error));
