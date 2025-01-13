@@ -186,67 +186,68 @@
             
             fetch(window.location.href + document.getElementById('fileDropdown').value)
                 .then(response => response.text())
-                .then(text => contratoFinal = text)
-
-            contratoFinal = contratoFinal.replaceAll('{{LOCADOR}}', document.getElementById('locador').value);
-            contratoFinal = contratoFinal.replaceAll('{{QUALIFICACAO}}', document.getElementById('qualificacao').value);
-            contratoFinal = contratoFinal.replaceAll('{{ENDERECO}}', document.getElementById('endereco').value);
-            contratoFinal = contratoFinal.replaceAll('{{RG_LOCADOR}}', document.getElementById('rg_locador').value);
-            contratoFinal = contratoFinal.replaceAll('{{CPF_LOCADOR}}', document.getElementById('cpf_locador').value);
-            contratoFinal = contratoFinal.replaceAll('{{NOME_INQUILINO}}', document.getElementById('nome_inquilino').value);
-            contratoFinal = contratoFinal.replaceAll('{{QUALIFICACAO_INQUILINO}}', document.getElementById('qualificacao_inquilino').value);
-            contratoFinal = contratoFinal.replaceAll('{{RG_INQUILINO}}', document.getElementById('rg_inquilino').value);
-            contratoFinal = contratoFinal.replaceAll('{{CPF_INQUILINO}}', document.getElementById('cpf_inquilino').value);
-            contratoFinal = contratoFinal.replaceAll('{{ENDERECO_MOVEL_LOCADO}}', document.getElementById('endereco_movel_locado').value);
-            contratoFinal = contratoFinal.replaceAll('{{PRAZO_MESES}}', document.getElementById('prazo_meses').value);
-            contratoFinal = contratoFinal.replaceAll('{{VALOR_ALUGUEL}}', document.getElementById('valor_aluguel').value);
-            contratoFinal = contratoFinal.replaceAll('{{VALOR_ALUGUEL_EXTENSO}}', document.getElementById('valor_aluguel_extenso').value);
-            contratoFinal = contratoFinal.replaceAll('{{DIA_PAGAMENTO}}', document.getElementById('dia_pagamento').value);
-            contratoFinal = contratoFinal.replaceAll('{{DIA_PAGAMENTO_EXTENSO}}', document.getElementById('dia_pagamento_extenso').value);
-            contratoFinal = contratoFinal.replaceAll('{{FORMA_PAGAMENTO}}', document.getElementById('forma_pagamento').value);
-            contratoFinal = contratoFinal.replaceAll('{{FORUM}}', document.getElementById('forum').value);
-            contratoFinal = contratoFinal.replaceAll('{{VALOR_MULTA}}', document.getElementById('valor_multa').value);
-            contratoFinal = contratoFinal.replaceAll('{{VALOR_MULTA_EXTENSO}}', document.getElementById('valor_multa_extenso').value);
-            contratoFinal = contratoFinal.replaceAll('{{FIADOR}}', document.getElementById('fiador').value);
-            contratoFinal = contratoFinal.replaceAll('{{QUALIFICACAO_FIADOR}}', document.getElementById('qualificacao_fiador').value);
-            contratoFinal = contratoFinal.replaceAll('{{ENDERECO_FIADOR}}', document.getElementById('endereco_fiador').value);
-            contratoFinal = contratoFinal.replaceAll('{{RG_FIADOR}}', document.getElementById('rg_fiador').value);
-            contratoFinal = contratoFinal.replaceAll('{{CPF_FIADOR}}', document.getElementById('cpf_fiador').value);
-            contratoFinal = contratoFinal.replaceAll('{{ESPOSA_FIADOR}}', document.getElementById('esposa_fiador').value);
-            contratoFinal = contratoFinal.replaceAll('{{PROPRIEDADE_FIADOR}}', document.getElementById('propriedade_fiador').value);
-            contratoFinal = contratoFinal.replaceAll('{{LOCAL_ASSINATURA}}', document.getElementById('local_assinatura').value);
-            contratoFinal = contratoFinal.replaceAll('{{DATA_ASSINATURA}}', document.getElementById('data_assinatura').value);
-            contratoFinal = contratoFinal.replaceAll('{{TESTEMUNHA1}}', document.getElementById('testemunha1').value);
-            contratoFinal = contratoFinal.replaceAll('{{TESTEMUNHA2}}', document.getElementById('testemunha2').value);
-
-            var contratoPartes = contratoFinal.split('\n\n');
-            console.log(contratoPartes);
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-            
-            var size = 20;
-            const fontSize = 12; // Tamanho da fonte em pontos
-            const fatorConversao = 0.3528; // 1 ponto ≈ 0.3528 mm
-            const alturaLinha = fontSize * fatorConversao;
-            var alturaTexto = 0; 
-            var linhas;
-
-            doc.setFont("Helvetica", "bold");
-            doc.setFontSize(fontSize);
-            
-            contratoPartes.forEach((item, index)=>{
-                linhas = doc.splitTextToSize(item, 170);
-                alturaTexto = linhas.length * alturaLinha;
-
-                if(size + alturaTexto >= 297){
-                    doc.addPage();
-                    size = 20;
-                }
-                console.log(item);
-                doc.text(item, 20, size, { maxWidth: 170 });
-                size += alturaTexto + fatorConversao * 5;
+                .then(text => {
+                    contratoFinal = text
+                    contratoFinal = contratoFinal.replaceAll('{{LOCADOR}}', document.getElementById('locador').value);
+                    contratoFinal = contratoFinal.replaceAll('{{QUALIFICACAO}}', document.getElementById('qualificacao').value);
+                    contratoFinal = contratoFinal.replaceAll('{{ENDERECO}}', document.getElementById('endereco').value);
+                    contratoFinal = contratoFinal.replaceAll('{{RG_LOCADOR}}', document.getElementById('rg_locador').value);
+                    contratoFinal = contratoFinal.replaceAll('{{CPF_LOCADOR}}', document.getElementById('cpf_locador').value);
+                    contratoFinal = contratoFinal.replaceAll('{{NOME_INQUILINO}}', document.getElementById('nome_inquilino').value);
+                    contratoFinal = contratoFinal.replaceAll('{{QUALIFICACAO_INQUILINO}}', document.getElementById('qualificacao_inquilino').value);
+                    contratoFinal = contratoFinal.replaceAll('{{RG_INQUILINO}}', document.getElementById('rg_inquilino').value);
+                    contratoFinal = contratoFinal.replaceAll('{{CPF_INQUILINO}}', document.getElementById('cpf_inquilino').value);
+                    contratoFinal = contratoFinal.replaceAll('{{ENDERECO_MOVEL_LOCADO}}', document.getElementById('endereco_movel_locado').value);
+                    contratoFinal = contratoFinal.replaceAll('{{PRAZO_MESES}}', document.getElementById('prazo_meses').value);
+                    contratoFinal = contratoFinal.replaceAll('{{VALOR_ALUGUEL}}', document.getElementById('valor_aluguel').value);
+                    contratoFinal = contratoFinal.replaceAll('{{VALOR_ALUGUEL_EXTENSO}}', document.getElementById('valor_aluguel_extenso').value);
+                    contratoFinal = contratoFinal.replaceAll('{{DIA_PAGAMENTO}}', document.getElementById('dia_pagamento').value);
+                    contratoFinal = contratoFinal.replaceAll('{{DIA_PAGAMENTO_EXTENSO}}', document.getElementById('dia_pagamento_extenso').value);
+                    contratoFinal = contratoFinal.replaceAll('{{FORMA_PAGAMENTO}}', document.getElementById('forma_pagamento').value);
+                    contratoFinal = contratoFinal.replaceAll('{{FORUM}}', document.getElementById('forum').value);
+                    contratoFinal = contratoFinal.replaceAll('{{VALOR_MULTA}}', document.getElementById('valor_multa').value);
+                    contratoFinal = contratoFinal.replaceAll('{{VALOR_MULTA_EXTENSO}}', document.getElementById('valor_multa_extenso').value);
+                    contratoFinal = contratoFinal.replaceAll('{{FIADOR}}', document.getElementById('fiador').value);
+                    contratoFinal = contratoFinal.replaceAll('{{QUALIFICACAO_FIADOR}}', document.getElementById('qualificacao_fiador').value);
+                    contratoFinal = contratoFinal.replaceAll('{{ENDERECO_FIADOR}}', document.getElementById('endereco_fiador').value);
+                    contratoFinal = contratoFinal.replaceAll('{{RG_FIADOR}}', document.getElementById('rg_fiador').value);
+                    contratoFinal = contratoFinal.replaceAll('{{CPF_FIADOR}}', document.getElementById('cpf_fiador').value);
+                    contratoFinal = contratoFinal.replaceAll('{{ESPOSA_FIADOR}}', document.getElementById('esposa_fiador').value);
+                    contratoFinal = contratoFinal.replaceAll('{{PROPRIEDADE_FIADOR}}', document.getElementById('propriedade_fiador').value);
+                    contratoFinal = contratoFinal.replaceAll('{{LOCAL_ASSINATURA}}', document.getElementById('local_assinatura').value);
+                    contratoFinal = contratoFinal.replaceAll('{{DATA_ASSINATURA}}', document.getElementById('data_assinatura').value);
+                    contratoFinal = contratoFinal.replaceAll('{{TESTEMUNHA1}}', document.getElementById('testemunha1').value);
+                    contratoFinal = contratoFinal.replaceAll('{{TESTEMUNHA2}}', document.getElementById('testemunha2').value);
+                    
+                    var contratoPartes = contratoFinal.split('\n\n');
+                    console.log(contratoPartes);
+                    const { jsPDF } = window.jspdf;
+                    const doc = new jsPDF();
+                    
+                    var size = 20;
+                    const fontSize = 12; // Tamanho da fonte em pontos
+                    const fatorConversao = 0.3528; // 1 ponto ≈ 0.3528 mm
+                    const alturaLinha = fontSize * fatorConversao;
+                    var alturaTexto = 0; 
+                    var linhas;
+                    
+                    doc.setFont("Helvetica", "bold");
+                    doc.setFontSize(fontSize);
+                    
+                    contratoPartes.forEach((item, index)=>{
+                        linhas = doc.splitTextToSize(item, 170);
+                        alturaTexto = linhas.length * alturaLinha;
+                        
+                        if(size + alturaTexto >= 297){
+                            doc.addPage();
+                            size = 20;
+                        }
+                        console.log(item);
+                        doc.text(item, 20, size, { maxWidth: 170 });
+                        size += alturaTexto + fatorConversao * 5;
+                    })
+                    doc.save("Contrato_de_Locação.pdf");
             })
-            doc.save("Contrato_de_Locação.pdf");
         }
 
         function generatePDF() {
