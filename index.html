@@ -161,7 +161,7 @@
     </form>
 
     <footer>
-        <p>Desenvolvido por [Seu Nome]</p>
+        <p>Desenvolvido por André Luis P Vieira</p>
     </footer>
 
     <script>
@@ -219,8 +219,8 @@
             contratoFinal = contratoFinal.replaceAll('{{TESTEMUNHA1}}', document.getElementById('testemunha1').value);
             contratoFinal = contratoFinal.replaceAll('{{TESTEMUNHA2}}', document.getElementById('testemunha2').value);
 
-            var contratoPartes = contratoFinal.split('\n');
-
+            var contratoPartes = contratoFinal.split('\n\n');
+            console.log(contratoPartes);
             const { jsPDF } = window.jspdf;
             const doc = new jsPDF();
             
@@ -242,7 +242,7 @@
                     doc.addPage();
                     size = 20;
                 }
-
+                console.log(item);
                 doc.text(item, 20, size, { maxWidth: 170 });
                 size += alturaTexto + fatorConversao * 5;
             })
