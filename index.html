@@ -166,7 +166,7 @@
         document.addEventListener('DOMContentLoaded', () => {
         const dropdown = document.getElementById('fileDropdown');
 
-        fetch(window.location.href + '/contratos.json')
+        fetch(window.location.href + 'contratos.json')
             .then(response => response.json())
             .then(data => {
             data.files.forEach(file => {
@@ -182,7 +182,7 @@
         function GeneratePDF2(){
             let contratoFinal = "";
             
-            fetch(window.location.href + '/' + document.getElementById('fileDropdown').value)
+            fetch(window.location.href + document.getElementById('fileDropdown').value)
                 .then(response => response.text())
                 .then(text => contratoFinal = text)
 
