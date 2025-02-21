@@ -1,0 +1,56 @@
+TERMO DE CONFIDENCIALIDADE
+
+1. Partes
+
+Este Termo de Confidencialidade ("Termo") é celebrado entre:
+
+[Nome da Parte Divulgadora], com sede em [endereço completo], inscrita no CNPJ sob o nº [número do CNPJ], doravante denominada "Parte Divulgadora";
+
+E
+
+[Nome da Parte Receptora], com sede em [endereço completo], inscrita no CNPJ sob o nº [número do CNPJ], doravante denominada "Parte Receptora".
+
+2. Objeto
+Este Termo tem como objetivo estabelecer as condições pelas quais as Partes irão proteger as informações confidenciais trocadas entre si durante o curso de [descrição do projeto ou motivo da troca de informações].
+
+3. Definição de Informações Confidenciais
+Para fins deste Termo, "Informações Confidenciais" incluem, mas não se limitam a, quaisquer dados, documentos, projetos, especificações, formulações, processos, informações comerciais, financeiras, técnicas, científicas, estratégicas, de marketing ou de outra natureza que forem divulgadas pela Parte Divulgadora à Parte Receptora, seja verbalmente, por escrito ou de outra forma.
+
+4. Obrigações das Partes
+A Parte Receptora se compromete a:
+
+- Manter as Informações Confidenciais em sigilo absoluto, não as divulgando a terceiros sem o prévio consentimento por escrito da Parte Divulgadora;
+- Utilizar as Informações Confidenciais exclusivamente para os fins estabelecidos no objeto deste Termo;
+- Adotar todas as medidas necessárias para proteger as Informações Confidenciais contra uso ou divulgação não autorizados.
+
+5. Exclusões
+As obrigações de confidencialidade não se aplicam às informações que:
+
+- Já eram de domínio público na data de sua divulgação ou venham a se tornar de domínio público sem violação deste Termo;
+- Forem comprovadamente conhecidas pela Parte Receptora antes de sua divulgação pela Parte Divulgadora;
+- Forem obtidas pela Parte Receptora de terceiros que não estejam vinculados por obrigação de confidencialidade.
+
+6. Prazo
+Este Termo permanecerá em vigor enquanto perdurar a relação entre as Partes e por um período de [indicar período] anos após o término dessa relação.
+
+7. Disposições Gerais
+- Este Termo não concede às Partes quaisquer direitos de propriedade intelectual sobre as Informações Confidenciais;
+- A Parte Receptora deverá devolver ou destruir todas as Informações Confidenciais, conforme solicitado pela Parte Divulgadora, ao término deste Termo.
+
+8. Foro
+As Partes elegem o foro da comarca de [cidade], estado de [estado], para dirimir quaisquer dúvidas ou controvérsias decorrentes deste Termo.
+
+[Local], [Data]
+
+**[Nome da Parte Divulgadora]**  
+Assinatura: ______________________________  
+Nome: ______________________________  
+Cargo: ______________________________  
+
+**[Nome da Parte Receptora]**  
+Assinatura: ______________________________  
+Nome: ______________________________  
+Cargo: ______________________________  
+
+---
+
