@@ -245,7 +245,7 @@
                         doc.text(item, 20, size, { maxWidth: 170 });
                         size += alturaTexto + fatorConversao * fontSize * 2;
                     })
-                    doc.save(document.getElementById('fileDropdown').value + ".pdf");
+                    doc.save(document.getElementById('fileDropdown').value.split(".")[0] + ".pdf");
             })
         }
 
